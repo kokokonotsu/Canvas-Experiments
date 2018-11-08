@@ -1,4 +1,3 @@
-
 function drawLine(){
 var canvas = document.getElementById('mainCanvas');
 var canvasLine = canvas.getContext("2d");
@@ -17,10 +16,34 @@ function drawCircle(){
 var canvas = document.getElementById('mainCanvas');
 var canvasLine = canvas.getContext("2d");
 var canvasImage = document.getElementById("canvasImage");
+var hlImage = document.createElement("img");
+hlImage.onload = function() {
+    tmpCtx.save();
+    tmpCtx.beginPath();
+    tmpCtx.arc(25, 25, 25, 0, Math.PI * 2, true);
+    tmpCtx.closePath();
+    tmpCtx.clip();
+
+    tmpCtx.drawImage(hlImage, 0, 0, 50, 50);
+
+    tmpCtx.beginPath();
+    tmpCtx.arc(0, 0, 25, 0, Math.PI * 2, true);
+    tmpCtx.clip();
+    tmpCtx.closePath();
+    tmpCtx.restore();
+
+};
+    hlImage.src = 'assets/Half_Life_3.png';
+
 let canvasPattern = canvasLine.createPattern(canvasImage, 'no-repeat');
-let gradient = canvasLine.createRadialGradient(100,50,5,100,70,50);
-gradient.addColorStop(0, "red");
-gradient.addColorStop(1, "white");
+let canvasHLPattern = canvasLine.createPattern(hlImage, 'no-repeat');
+let gradient = canvasLine.createRadialGradient(250,110,20,250,50,50);
+gradient.addColorStop(0, "white");
+gradient.addColorStop(1, "black");
+
+canvasLine.rect(0, 0, 400, 200);
+canvasLine.fillStyle="black";
+canvasLine.fill();
 
 canvasLine.fillStyle=gradient;
 canvasLine.fillRect(0, 0, 400, 200);
@@ -28,9 +51,18 @@ canvasLine.fillRect(0, 0, 400, 200);
 //Creates Circle on-top of gradient;
 canvasLine.beginPath();
 canvasLine.arc(120, 100, 50, 0, 2*Math.PI/*Or Integer 20*/); 
+canvasLine.strokeStyle="white";
 canvasLine.stroke();
 
 //Fills circle with 'canvasPattern' pattern// 
 canvasLine.fillStyle=canvasPattern; 
+canvasLine.fill();
+
+canvasLine.beginPath();
+canvasLine.arc(250, 60, 40, 0, 2*Math.PI/*Or Integer 20*/);
+canvasLine.strokeStyle="orange";
+canvasLine.stroke();
+
+canvasLine.fillStyle=canvasHLPattern;
 canvasLine.fill();
 }
