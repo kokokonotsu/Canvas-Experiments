@@ -12,9 +12,23 @@ canvasLine.moveTo(0,0);
 canvasLine.lineTo(400, 200);
 canvasLine.stroke();
 }
-function drawCircle(){
+function draw(){
 var canvas = document.getElementById('mainCanvas');
 var canvasLine = canvas.getContext("2d");
+canvasLine.fillStyle="#00000030";
+canvasLine.fillRect(10, 10, 50, 50);
+
+canvasLine.fillStyle="#00000060";
+canvasLine.fillRect(30, 30, 50, 50);
+
+canvasLine.fillStyle="#00000060";
+canvasLine.fillRect(100, 20, 100, 100);
+
+canvasLine.fillStyle="#00000030";
+canvasLine.clearRect(120, 60, 60, 60);
+
+canvasLine.strokeStyle="#00000060";
+canvasLine.strokeRect(140, 80, 20, 40);
 /*
 //PogChamp Start//
 var pogChampImage = document.createElement("img");
