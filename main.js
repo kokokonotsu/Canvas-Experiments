@@ -15,10 +15,10 @@ canvasLine.stroke();
 function drawCircle(){
 var canvas = document.getElementById('mainCanvas');
 var canvasLine = canvas.getContext("2d");
+/*
 //PogChamp Start//
 var pogChampImage = document.createElement("img");
 pogChampImage.onload = function() {
-    canvasLine.save();
     canvasLine.strokeStyle="white";
     canvasLine.beginPath();
     canvasLine.moveTo(95, 100);
@@ -43,7 +43,7 @@ pogChampImage.src ='assets/pogChamp.png';
 //HL3 Start//
 var hlImage = document.createElement("img");
 hlImage.onload = function() {
-    canvasLine.save();
+    
     canvasLine.beginPath();
     canvasLine.arc(250, 60, 40, 0, Math.PI * 2, true);
     canvasLine.strokeStyle="orange";
@@ -67,7 +67,7 @@ canvasLine.fill();
 canvasLine.fillStyle=gradient;
 canvasLine.fillRect(0, 0, 400, 200);
 
-
+*/
 //Creates Circle on-top of gradient;
 /*canvasLine.beginPath();
 canvasLine.arc(120, 100, 50, 0, 2*Math.PI/*Or Integer 20*); 
