@@ -48,6 +48,133 @@ canvasLine.moveTo(260, 40);
 canvasLine.arc(230, 40, 10, 0, -0.5, true); //Mouth
 canvasLine.stroke();
 //Face End//
+//Body Start//
+//Left Neck//
+canvasLine.beginPath();
+canvasLine.moveTo(248,50);
+canvasLine.quadraticCurveTo(250, 60, 230, 60);
+canvasLine.stroke();
+//Left Shoulder//
+canvasLine.beginPath();
+canvasLine.moveTo(230, 60);
+canvasLine.quadraticCurveTo(220, 60, 220, 70);
+canvasLine.stroke();
+//Left Outer-Arm//
+canvasLine.beginPath();
+canvasLine.moveTo(220, 70);
+canvasLine.lineTo(220, 105);
+canvasLine.stroke();
+//Left Hand//
+canvasLine.beginPath();
+canvasLine.arc(225, 105, 5, 0, Math.PI);
+canvasLine.stroke();
+//Left Inner-Arm//
+canvasLine.beginPath();
+canvasLine.moveTo(230, 105);
+canvasLine.lineTo(230, 75);
+canvasLine.stroke();
+//Left Arm-Pit//
+canvasLine.beginPath();
+canvasLine.arc(233, 75, 3, 0, Math.PI, true);
+canvasLine.stroke();
+//Left Torso//
+canvasLine.beginPath();
+canvasLine.moveTo(236, 75);
+canvasLine.lineTo(236, 105);
+canvasLine.stroke();
+//Left Outer-Leg//
+canvasLine.beginPath();
+canvasLine.moveTo(236, 105);
+canvasLine.lineTo(236, 140);
+canvasLine.stroke();
+//Left Shoe-Top//
+canvasLine.beginPath();
+canvasLine.moveTo(236, 140);
+canvasLine.quadraticCurveTo(220, 135, 220, 145);
+canvasLine.stroke();
+//Left Shoe-Bottom//
+canvasLine.beginPath();
+canvasLine.moveTo(220, 145);
+canvasLine.lineTo(250, 145);
+canvasLine.stroke();
+//Inner-Legs//
+canvasLine.beginPath();
+canvasLine.moveTo(250, 145);
+canvasLine.lineTo(250, 110);
+canvasLine.stroke();
+//Right Shoe-Bottom//
+canvasLine.beginPath();
+canvasLine.moveTo(250, 145);
+canvasLine.lineTo(280, 145);
+canvasLine.stroke();
+//Right Shoe-Top//
+canvasLine.beginPath();
+canvasLine.moveTo(280,145);
+canvasLine.quadraticCurveTo(280, 135, 264, 140);
+canvasLine.stroke();
+//Right Outer-Leg//
+canvasLine.beginPath();
+canvasLine.moveTo(264, 140);
+canvasLine.lineTo(264, 105);
+canvasLine.stroke();
+//Right Inner-Torso//
+canvasLine.beginPath();
+canvasLine.moveTo(264, 105);
+canvasLine.lineTo(264, 75);
+canvasLine.stroke();
+//Right Arm-Pit//
+canvasLine.beginPath();
+canvasLine.arc(267, 75, 3, 0, Math.PI, true);
+canvasLine.stroke();
+//Right Inner-Arm//
+canvasLine.beginPath();
+canvasLine.moveTo(270, 75);
+canvasLine.lineTo(270, 105);
+canvasLine.stroke();
+//Right Hand//
+canvasLine.beginPath();
+canvasLine.arc(275, 105, 5, 0, Math.PI);
+canvasLine.stroke();
+//Right Outer-Arm//
+canvasLine.beginPath();
+canvasLine.moveTo(280, 105);
+canvasLine.lineTo(280, 70);
+canvasLine.stroke();
+//Right Shoulder//
+canvasLine.beginPath();
+canvasLine.moveTo(280, 70);
+canvasLine.quadraticCurveTo(280, 60, 270, 60);
+canvasLine.stroke();
+//Right Neck//
+canvasLine.beginPath();
+canvasLine.moveTo(270, 60);
+canvasLine.quadraticCurveTo(252, 60, 252, 50);
+canvasLine.stroke();
+//Body End//
+//Attempt at Mouse-over Coordinates//
+/*
+var canvas = document.getElementById('mainCanvas');
+function writeMessage(canvas, message) {
+    var context = canvas.getContext('2d');
+    context.clearRect(300, 180, 30, 20);
+    context.font = '18pt Calibri';
+    context.fillStyle = 'black';
+    context.fillText(message, 10, 25);
+  }
+  function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+      x: evt.clientX - rect.left,
+      y: evt.clientY - rect.top
+    };
+  }
+  canvas.addEventListener('mousemove', function(evt) {
+    var mousePos = getMousePos(canvas, evt);
+    var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+    writeMessage(canvas, message);
+  }, false);
+*/
+//End Attempt at Mouse-over Coordinates//
 /*
 //PogChamp Start//
 var pogChampImage = document.createElement("img");
