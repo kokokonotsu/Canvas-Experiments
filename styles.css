@@ -1,0 +1,40 @@
+:root{
+    --primaryBackgroundColor: darkgrey;
+    --secondaryBackgroundColor: lightgrey;
+}
+body{
+    margin: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: 
+    "header header header" 10%
+    ". main ." 80%
+    "footer footer footer" 10%
+    / 10% auto 10%; 
+}
+header{
+    grid-area: header;
+    background-color: var(--primaryBackgroundColor);
+}
+main{
+    grid-area: main;
+    background-color: var(--secondaryBackgroundColor);
+}
+main canvas{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    grid-area: footer;
+    display: block;
+    width: 100%;
+    background-color: var(--primaryBackgroundColor);
+    
+}
