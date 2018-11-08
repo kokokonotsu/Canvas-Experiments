@@ -18,19 +18,19 @@ var canvasLine = canvas.getContext("2d");
 var canvasImage = document.getElementById("canvasImage");
 var hlImage = document.createElement("img");
 hlImage.onload = function() {
-    tmpCtx.save();
-    tmpCtx.beginPath();
-    tmpCtx.arc(25, 25, 25, 0, Math.PI * 2, true);
-    tmpCtx.closePath();
-    tmpCtx.clip();
+    canvasLine.save();
+    canvasLine.beginPath();
+    canvasLine.arc(25, 25, 25, 0, Math.PI * 2, true);
+    canvasLine.closePath();
+    canvasLine.clip();
 
-    tmpCtx.drawImage(hlImage, 0, 0, 50, 50);
+    canvasLine.drawImage(hlImage, 0, 0, 50, 50);
 
-    tmpCtx.beginPath();
-    tmpCtx.arc(0, 0, 25, 0, Math.PI * 2, true);
-    tmpCtx.clip();
-    tmpCtx.closePath();
-    tmpCtx.restore();
+    canvasLine.beginPath();
+    canvasLine.arc(0, 0, 25, 0, Math.PI * 2, true);
+    canvasLine.clip();
+    canvasLine.closePath();
+    canvasLine.restore();
 
 };
     hlImage.src = 'assets/Half_Life_3.png';
