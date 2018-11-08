@@ -33,19 +33,21 @@ canvasLine.clearRect(120, 60, 60, 60);
 canvasLine.strokeStyle="#00000060";
 canvasLine.strokeRect(140, 80, 20, 40);
 
+//Face Begin//
 canvasLine.beginPath();
-canvasLine.arc(250, 30, 20, 0, Math.PI*2), true;
+canvasLine.arc(250, 30, 20, 0, Math.PI*2), true; //Head Shape
 canvasLine.moveTo(245, 20);
-canvasLine.arc(240, 20, 5, 0, Math.PI*2, true);
+canvasLine.arc(240, 20, 5, 0, Math.PI*2, true); //Left Eye
 canvasLine.moveTo(243, 20);
-canvasLine.arc(241, 20, 2, 0, Math.PI*2, true);
+canvasLine.arc(241, 20, 2, 0, Math.PI*2, true); //Left Pupil 
 canvasLine.moveTo(265, 20);
-canvasLine.arc(260, 20, 5, 0, Math.PI*2, true);
+canvasLine.arc(260, 20, 5, 0, Math.PI*2, true); //Right Eye
 canvasLine.moveTo(261, 20);
-canvasLine.arc(259, 20, 2, 0, Math.PI*2, true);
+canvasLine.arc(259, 20, 2, 0, Math.PI*2, true); //Right Pupil
 canvasLine.moveTo(260, 40);
-canvasLine.arc(230, 40, 10, 0, -0.5, true);
+canvasLine.arc(230, 40, 10, 0, -0.5, true); //Mouth
 canvasLine.stroke();
+//Face End//
 /*
 //PogChamp Start//
 var pogChampImage = document.createElement("img");
