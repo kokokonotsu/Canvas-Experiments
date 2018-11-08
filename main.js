@@ -21,6 +21,9 @@ canvasLine.fillRect(10, 10, 50, 50);
 canvasLine.fillStyle="#00000060";
 canvasLine.fillRect(30, 30, 50, 50);
 
+canvasLine.fillStyle="#00000030";
+canvasLine.clearRect(20, 20, 25, 25);
+
 canvasLine.fillStyle="#00000060";
 canvasLine.fillRect(100, 20, 100, 100);
 
@@ -29,6 +32,20 @@ canvasLine.clearRect(120, 60, 60, 60);
 
 canvasLine.strokeStyle="#00000060";
 canvasLine.strokeRect(140, 80, 20, 40);
+
+canvasLine.beginPath();
+canvasLine.arc(250, 30, 20, 0, Math.PI*2), true;
+canvasLine.moveTo(245, 20);
+canvasLine.arc(240, 20, 5, 0, Math.PI*2, true);
+canvasLine.moveTo(243, 20);
+canvasLine.arc(241, 20, 2, 0, Math.PI*2, true);
+canvasLine.moveTo(265, 20);
+canvasLine.arc(260, 20, 5, 0, Math.PI*2, true);
+canvasLine.moveTo(261, 20);
+canvasLine.arc(259, 20, 2, 0, Math.PI*2, true);
+canvasLine.moveTo(260, 40);
+canvasLine.arc(230, 40, 10, 0, -0.5, true);
+canvasLine.stroke();
 /*
 //PogChamp Start//
 var pogChampImage = document.createElement("img");
