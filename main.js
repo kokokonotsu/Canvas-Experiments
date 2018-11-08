@@ -21,6 +21,8 @@ hlImage.onload = function() {
     canvasLine.save();
     canvasLine.beginPath();
     canvasLine.arc(25, 25, 25, 0, Math.PI * 2, true);
+    canvasLine.strokeStyle="white";
+    canvasLine.stroke();
     canvasLine.closePath();
     canvasLine.clip();
 
@@ -28,12 +30,15 @@ hlImage.onload = function() {
 
     canvasLine.beginPath();
     canvasLine.arc(0, 0, 25, 0, Math.PI * 2, true);
+    canvasLine.strokeStyle="white";
     canvasLine.clip();
     canvasLine.closePath();
     canvasLine.restore();
 
 };
     hlImage.src = 'assets/Half_Life_3.png';
+    hlImage.id = "hlImage";
+    hlImage.setAttribute('style', 'visibility: hidden');
 
 let canvasPattern = canvasLine.createPattern(canvasImage, 'no-repeat');
 let canvasHLPattern = canvasLine.createPattern(hlImage, 'no-repeat');

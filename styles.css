@@ -39,6 +39,6 @@ footer{
     
 }
 #hlImage{
-    width: 20vw;
-    height: 20vh;
+    display: none;
+    visibility: hidden;
 }
